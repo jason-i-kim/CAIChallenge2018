@@ -1,9 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+var data = {};
+
+
+/* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'FAA Drone Registration' });
+	console.log(req.query.finalstr);
+  res.render('registered', { title: 'Registered!' });
 });
 
 module.exports = router;

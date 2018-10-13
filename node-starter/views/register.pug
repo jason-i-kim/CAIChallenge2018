@@ -4,10 +4,12 @@ block content
   .main.container
 
   body
-    form(action='POST', style='border:1px solid #ccc')
+    form(action='/registeraction', method='post', style='border:1px solid #ccc')
       .container
         h1 Register
         p Please fill in this form to register your drone.
+        h2 
+        button(type='reset') Reset Form
         hr
         label(for='firstName')
           b First Name: 
@@ -33,6 +35,10 @@ block content
           b Zip Code: 
         input(type='text', placeholder='Zip Code', name='zipCode')
         hr
+        label(for='droneID')
+          b Drone ID Number: 
+        input(type='text', placeholder='ID Number', name='droneID')
+        hr
         .clearfix
-          button.cancelbtn(type='button') Cancel
-          button.signupbtn(type='submit') Sign Up
+          a(href='../') Go Back
+          button(type='submit') Sign Up
